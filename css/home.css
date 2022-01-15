@@ -1,0 +1,44 @@
+#home .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+#home .content div h1 {
+    font-size: 8rem;
+    line-height: 3.3cm;
+    margin-bottom: 30px;
+    text-align: start;
+}
+
+#home .content div .btn {
+    margin: 0px 10px;
+    border: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+#home .content div .btn.full-red {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+#home .content div .btn.border-red {
+    color: var(--primary);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#home .content div .btn.border-red:hover {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+#home .content img {
+    border-radius: 50%;
+}
