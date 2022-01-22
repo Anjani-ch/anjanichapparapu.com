@@ -1,3 +1,3 @@
 # anjanichapparapu.com
 #### URL:
-[anjanichapparapu.com/](https://anjanichapparapu.com/)
+[anjanichapparapu.com](https://anjanichapparapu.com/)
