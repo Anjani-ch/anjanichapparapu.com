@@ -14,6 +14,7 @@ body {
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 ul {
@@ -48,6 +49,28 @@ section h1 {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.btn.github {
+    background: purple;
+    color: var(--secondary);
+}
+
+.btn.view {
+    background: rgb(68, 81, 141);
+    color: var(--secondary);
+}
+
+.btn.full-red {
+    background: var(--primary);
+    color: var(--secondary);
+}
+
+.btn.border-red {
+    color: var(--primary);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .overflow-hidden {

@@ -15,16 +15,6 @@
     margin: auto;
 }
 
-#work #projects .project div .view {
-    background: rgb(68, 81, 141);
-    color: var(--secondary);
-}
-
-#work #projects .project div .github {
-    background: purple;
-    color: var(--secondary);
-}
-
 #work #projects .project div a i {
     margin-right: 3px;
 }

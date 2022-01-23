@@ -18,20 +18,11 @@
 
 #home .content div .btn {
     margin: 0px 10px;
-    border: 2px solid var(--primary);
     margin-bottom: 20px;
 }
 
-#home .content div .btn.full-red {
-    background: var(--primary);
-    color: var(--secondary);
-}
-
-#home .content div .btn.border-red {
-    color: var(--primary);
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+#home .content div .btn:not(.github) {
+    border: 2px solid var(--primary);
 }
 
 #home .content div .btn.border-red:hover {
