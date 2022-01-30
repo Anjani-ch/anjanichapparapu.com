@@ -1,0 +1,19 @@
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+
+    &:hover { @include transform(scale(.97)); }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include set-bg-color($primary);
+
+    &-lightend {
+        @include set-bg-color(lighten($primary, 10%));
+        @extend %btn;
+    }
+}

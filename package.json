@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "watch-scss": "sass --watch src/scss public/css --style compressed",
-    "build": "sass src/scss public/css --style compressed"
+    "watch-css": "sass --watch src/scss/styles.scss public/css/styles.css --style compressed",
+    "build": "sass src/scss/styles.scss public/css/styles.css --style compressed"
   },
   "repository": {
     "type": "git",

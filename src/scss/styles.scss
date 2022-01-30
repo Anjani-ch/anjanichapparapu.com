@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 @import 'config';
 @import 'utilities';
+@import 'buttons';
 
 // Reset
 * {
@@ -16,5 +18,73 @@ a { text-decoration: none; }
 
 ul { list-style: none; }
 
+i { cursor: pointer; }
+
+// Navbar
+nav {
+    @include set-bg-color($primary);
+
+    a { color: set-text-color($primary); }
+
+    #theme-toggler-wrapper {
+        input:checked {
+            + label {
+                background-color: white;
+
+                .fa-sun {
+                    @include transform(translateX(-43px));
+                    opacity: 0;
+                }
+
+                .fa-moon {
+                    @include transform(translateX(43px));
+                    @include transform(translateX(0px));
+                    opacity: 1;
+                }
+
+                #theme-toggler-ball {
+                    @include transform(translateX(40px));
+                    background: #222;
+                }
+            }
+        }
+
+        label {
+            width: 75px;
+            height: 35px;
+            padding: 0 6px;
+            background: #222;
+            border-radius: 50px;
+            cursor: pointer;
+            @include transition(.3s);
+
+            i { font-size: 18px; }
+
+            .fa-sun {
+                color: gold;
+                @include transition(.8s);
+                opacity: 1;
+            }
+
+            .fa-moon {
+                color: black;
+                @include transition(.8s);
+                @include transform(translateX(43px));
+                opacity: 0;
+            }
+
+            #theme-toggler-ball {
+                width: 25px;
+                height: 25px;
+                top: 5px;
+                left: 5px;
+                background: #fff;
+                border-radius: 50%;
+                @include transition(.8s);
+            }
+        }
+    }
+}
+
 // Footer
-footer { text-align: center; }
+footer { @include set-bg-color($primary); }
