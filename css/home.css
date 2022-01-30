@@ -19,10 +19,15 @@
 #home .content div .btn {
     margin: 0px 10px;
     margin-bottom: 20px;
+    border: 2px solid var(--primary);
 }
 
-#home .content div .btn:not(.github) {
-    border: 2px solid var(--primary);
+#home .content div .btn.github {
+    border: 2px solid purple;
+}
+
+#home .content div .btn.github i {
+    margin-right: 3px;
 }
 
 #home .content div .btn.border-red:hover {
