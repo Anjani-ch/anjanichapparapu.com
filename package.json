@@ -1,0 +1,29 @@
+{
+  "name": "anjanichapparapu.com",
+  "version": "2.0.0",
+  "description": "My Website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "watch-scss": "sass --watch src/scss public/css --style compressed",
+    "build": "sass src/scss public/css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anjani-ch/anjanichapparapu.com.git"
+  },
+  "author": "Anjani Pranav Reddy Chapparapu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anjani-ch/anjanichapparapu.com/issues"
+  },
+  "homepage": "https://github.com/Anjani-ch/anjanichapparapu.com#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}
