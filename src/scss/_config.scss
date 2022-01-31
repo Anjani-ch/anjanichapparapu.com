@@ -1,28 +1,22 @@
 $primary: crimson;
 
-// Themes
-$themes: (
-  light: (
-    'primary': crimson
-  ),
-  dark: (
-    'primary': black,
-  )
-);
-
 // Functions
 @function set-text-color($color) {
     @if(lightness($color) > 70) { @return black; }
     @return white;
 }
 
+@function set-bg-color($color) {
+    @return $color;
+}
+
 // Mixins
-@mixin set-bg-color($color) {
-    background-color: $color;
+@mixin set-contrast($color) {
+    background-color: set-bg-color($color);
     color: set-text-color(($color));
 }
 
-@mixin transform($property) {
+@mixin transform($property...) {
     -webkit-transform: $property;
     -ms-transform: $property;
     -o-transform: $property;
@@ -33,4 +27,8 @@ $themes: (
     -webkit-transition: $property;
     -o-transition: $property;
     transition: $property;
+}
+
+@mixin media-mobile() {
+    @media(max-width: 768px) { @content; }
 }

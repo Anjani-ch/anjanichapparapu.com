@@ -2,8 +2,10 @@
 .container {
     max-width: 1100px;
     width: 80%;
-    margin: auto;
 }
+
+// Colors
+.primary { color: $primary; }
 
 // Text align
 $text-align-properties: (start, center, end);

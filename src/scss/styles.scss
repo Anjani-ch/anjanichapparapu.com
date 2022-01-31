@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 @import 'config';
@@ -12,7 +12,7 @@
     padding: 0;
 }
 
-body { font-family: 'Montserrat', sans-serif; }
+body { font-family: 'Baloo Chettan 2', cursive; }
 
 a { text-decoration: none; }
 
@@ -22,10 +22,63 @@ i { cursor: pointer; }
 
 // Navbar
 nav {
-    @include set-bg-color($primary);
+    background-color: $primary;
 
-    a { color: set-text-color($primary); }
+    a {
+        color: set-text-color($primary);
+        font-size: 1.15rem;
+    }
 
+    @include media-mobile() {
+        .container {
+            #menu-btn {
+                display: flex;
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                @include transition(all .5s ease-in-out);
+
+                // Main menu line
+                div {
+                    width: 30px;
+                    height: 6px;
+                    background: set-text-color($primary);
+                    border-radius: 5px;
+                    @include transition(transform .5s ease-in-out);
+
+                    // Add line on top and bottom of main line
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 45px;
+                        height: 6px;
+                        background-color: set-text-color($primary);
+                        border-radius: 5px;
+                        @include transition(all .5s ease-in-out);
+                    }
+
+                    &::before { @include transform(translateY(-16px)); }
+                    &::after { @include transform(translateY(16px)); }
+                }
+
+                // Menu animation
+                &.open {
+                    div {
+                        @include transform(translateX(-50px));
+                        background-color: set-bg-color(transparent);
+
+                        &::before { @include transform(rotate(45deg) translate(35px, -35px)); }
+                        &::after { @include transform(rotate(-45deg) translate(35px, 35px)); }
+                    }
+                }
+            }
+
+            ul { display: none }
+        }
+    };
+
+    // Theme toggle
     #theme-toggler-wrapper {
         input:checked {
             + label {
@@ -86,5 +139,19 @@ nav {
     }
 }
 
+#home {
+    div {
+        h1 {
+            font-size: 8rem;
+            line-height: 3.3cm;
+        }
+    }
+    
+    img { border-radius: 50%; }
+}
+
 // Footer
-footer { @include set-bg-color($primary); }
+footer {
+    @include set-contrast($primary);
+    font-size: 1.15rem;
+}
