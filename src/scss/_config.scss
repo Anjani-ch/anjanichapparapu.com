@@ -1,5 +1,14 @@
-// Variables
 $primary: crimson;
+
+// Themes
+$themes: (
+  light: (
+    'primary': crimson
+  ),
+  dark: (
+    'primary': black,
+  )
+);
 
 // Functions
 @function set-text-color($color) {
