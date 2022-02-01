@@ -1,4 +1,6 @@
+// Stylesheets
 import '../css/styles.css';
 
+// Scripts
 import './navbar.js';
-import './theme.js';
+import './collapse.js';

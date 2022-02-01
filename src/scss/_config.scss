@@ -1,4 +1,5 @@
 $primary: crimson;
+$secondary: white;
 
 // Functions
 @function set-text-color($color) {
@@ -23,12 +24,21 @@ $primary: crimson;
     transform: $property;
 }
 
-@mixin transition($property) {
+@mixin transition($property...) {
     -webkit-transition: $property;
     -o-transition: $property;
     transition: $property;
 }
 
-@mixin media-mobile() {
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    box-shadow: $property;
+}
+
+@mixin media-md() {
     @media(max-width: 768px) { @content; }
+}
+
+@mixin media-sm() {
+    @media(max-width: 500px) { @content; }
 }

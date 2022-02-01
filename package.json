@@ -6,10 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "serve": "nodemon app.js",
-    "sass-dev": "sass --watch src/scss/styles.scss src/css/styles.css --style compressed",
-    "sass": "sass src/scss/styles.scss src/css/styles.css --style compressed",
-    "webpack-dev": "webpack -w --mode development",
-    "webpack": "webpack --mode production"
+    "sass": "sass --watch src/scss/styles.scss src/css/styles.css --style compressed",
+    "webpack": "webpack -w --mode development"
   },
   "repository": {
     "type": "git",

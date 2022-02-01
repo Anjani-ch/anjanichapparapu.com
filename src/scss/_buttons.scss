@@ -18,6 +18,8 @@
 .btn-github {
     @extend %btn;
     @include set-contrast(purple);
+    
+    i { margin-right: 2px; }
 }
 
 .btn-lightend {
