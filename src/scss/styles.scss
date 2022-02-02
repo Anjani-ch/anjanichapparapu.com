@@ -26,6 +26,8 @@ i { cursor: pointer; }
 // Navbar
 nav {
     background-color: $primary;
+    top: 0;
+    left: 0;
 
     a {
         color: set-text-color($primary);
@@ -211,12 +213,21 @@ nav {
     }
 }
 
+// Job Experience
 #job-experience {
     h1 { font-size: 2.4rem; }
 }
 
+// Education
 #education {
     h1 { font-size: 2.4rem; }
+}
+
+// Projects
+#projects {
+    .card-body {
+        a { display: block; }
+    }
 }
 
 // Footer

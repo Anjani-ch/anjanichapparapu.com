@@ -1,13 +1,14 @@
 %btn {
     display: inline-block;
+    cursor: pointer;
+    text-align: center;
     border-radius: 5px;
     padding: 10px 15px;
     margin: 5px;
     font-size: 1.2rem;
-    cursor: pointer;
     @include transition(transform .3s);
 
-    &:hover { @include transform(scale(.97)); }
+    &:hover, &:focus { @include transform(scale(.97)); }
 }
 
 .btn-primary {
