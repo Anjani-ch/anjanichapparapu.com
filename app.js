@@ -1,13 +1,15 @@
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.set('view engine', 'ejs');
-
+app.use(helmet());
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => res.render('index', { title: 'Home', year: new Date().getFullYear() }));
 app.get('/job-experience', (req, res) => res.render('job-experience', { title: 'Job Experience', year: new Date().getFullYear() }));
