@@ -112,8 +112,8 @@ $space-amounts: (1, 2, 3, 4, 5, auto);
 // Cards
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 
     @include media-md() { grid-template-columns: repeat(2, 1fr); }
     @include media-sm() { grid-template-columns: repeat(1, 1fr); }
@@ -121,19 +121,27 @@ $space-amounts: (1, 2, 3, 4, 5, auto);
 
 .card {
     $card-border-radius: 10px;
+    $card-padding: 10px 15px;
 
     background-color: set-bg-color(white);
     border-radius: $card-border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @include box-shadow(2px 0px 10px 2px lightgrey);
 
     img {
         width: 100%;
-        border-radius: $card-border-radius;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
     }
 
-    &-body {
-        padding: 10px 15px;
+    &-heading {
+        text-align: center;
+        padding: $card-padding;
     }
+    
+    &-body { padding: $card-padding; }
 }
 
 // Footer placement

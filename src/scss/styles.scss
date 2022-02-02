@@ -113,66 +113,6 @@ nav {
             }
         }
     }
-
-    // Theme toggle
-    #theme-toggler-wrapper {
-        input:checked {
-            + label {
-                background-color: white;
-
-                .fa-sun {
-                    @include transform(translateX(-43px));
-                    opacity: 0;
-                }
-
-                .fa-moon {
-                    @include transform(translateX(43px));
-                    @include transform(translateX(0px));
-                    opacity: 1;
-                }
-
-                #theme-toggler-ball {
-                    @include transform(translateX(40px));
-                    background: #222;
-                }
-            }
-        }
-
-        label {
-            width: 75px;
-            height: 35px;
-            padding: 0 6px;
-            background: #222;
-            border-radius: 50px;
-            cursor: pointer;
-            @include transition(.3s);
-
-            i { font-size: 18px; }
-
-            .fa-sun {
-                color: gold;
-                @include transition(.8s);
-                opacity: 1;
-            }
-
-            .fa-moon {
-                color: black;
-                @include transition(.8s);
-                @include transform(translateX(43px));
-                opacity: 0;
-            }
-
-            #theme-toggler-ball {
-                width: 25px;
-                height: 25px;
-                top: 5px;
-                left: 5px;
-                background: #fff;
-                border-radius: 50%;
-                @include transition(.8s);
-            }
-        }
-    }
 }
 
 #home {
@@ -225,8 +165,15 @@ nav {
 
 // Projects
 #projects {
+    section {
+        > h1 { font-size: 2.4rem; }
+    }
+
     .card-body {
-        a { display: block; }
+        a {
+            display: block;
+            width: 100%;
+        }
     }
 }
 
