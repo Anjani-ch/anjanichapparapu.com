@@ -7,7 +7,6 @@
 @import url('work.css');
 @import url('contact.css');
 @import url('mobile.css');
-@import url('animations.css');
 
 :root {
     --primary: red;
@@ -22,6 +21,8 @@ body {
 
 * {
     scroll-behavior: smooth;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -57,6 +58,18 @@ section h1 {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: -o-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s, -o-transform .3s;
+}
+
+.btn:hover, .btn:focus {
+    -webkit-transform: scale(.97);
+    -ms-transform: scale(.97);
+    -o-transform: scale(.97);
+    transform: scale(.97);
 }
 
 .btn.github {
@@ -76,9 +89,9 @@ section h1 {
 
 .btn.border-red {
     color: var(--primary);
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: color .3s ease, background .3s ease;
+    -o-transition: color .3s ease, background .3s ease;
+    transition: color .3s ease, background .3s ease;
 }
 
 .overflow-hidden {
