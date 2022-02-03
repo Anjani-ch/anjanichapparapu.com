@@ -4,6 +4,7 @@ const nav = document.querySelector('#nav')
 const logo = document.querySelector('#logo')
 const menuIcon = document.querySelector('#menu-icon')
 const navLinks = document.querySelectorAll('nav ul a')
+const year = document.querySelector('footer span')
 const sections = document.querySelectorAll('section')
 
 const addScrolledToNavIfScrolled = () => {
@@ -29,6 +30,7 @@ addEventListener('scroll', () => {
             navLinks.forEach(link => link.href.includes('#' + section.id) ? link.classList.add('active') : '')
         }
     })
+    year.innerText = new Date().getFullYear()
 })
 
 nav.addEventListener('click', e => {
