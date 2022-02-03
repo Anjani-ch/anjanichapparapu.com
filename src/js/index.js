@@ -19,9 +19,7 @@ const hasScrollbar = () => {
     let overflowYStyle;
 
     if (typeof window.innerWidth === 'number') return window.innerWidth > document.documentElement.clientWidth;
-  
     if (typeof rootElem.currentStyle !== 'undefined') overflowStyle = rootElem.currentStyle.overflow;
-  
     if (typeof rootElem.currentStyle !== 'undefined') overflowYStyle = rootElem.currentStyle.overflowY;
 
     // Check overflow style property on body for fauxscrollbars
