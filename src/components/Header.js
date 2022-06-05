@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import ToggleTheme from './ToggleTheme';
+
 function Header() {
   const [isToggled, setIsToggled] = useState(false);
 
@@ -47,15 +49,12 @@ function Header() {
     <header>
       <nav className="bg-white px-2 sm:px-4 py-2.5 border-b border-slate-400 dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <NavLink to="/" className="flex items-center text-2xl">AC</NavLink>
+          <NavLink to="/" className="flex items-center text-2xl dark:text-white">AC</NavLink>
 
           <div className="flex items-center md:order-2">
-            <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="dark-mode-toggle">
-              <span className="sr-only">Toggle dark mode</span>
-              <img className="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-3.jpg" alt="user" />
-            </button>
+            <ToggleTheme />
 
-            <button onClick={toggleNav} data-collapse-toggle="mobile-nav" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+            <button onClick={toggleNav} data-collapse-toggle="mobile-nav" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
               <span className="sr-only">Toggle mobile menu</span>
               {renderToggleButton()}
             </button>
@@ -68,7 +67,7 @@ function Header() {
                   let result = 'block py-2 pr-4 pl-3 ';
               
                   if(isActive) {
-                    result += 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white';
+                    result += 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white dark:bg-gray-900';
                   } else {
                     result += 'text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700';
                   }
