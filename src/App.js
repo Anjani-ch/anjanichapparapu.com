@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from './pages/HomePage.js';
-import AboutPage from './pages/AboutPage.js';
-import ProjectsPage from './pages/ProjectsPage.js';
-import ContactPage from './pages/ContactPage.js';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
 
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
