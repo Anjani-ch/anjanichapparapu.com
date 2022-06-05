@@ -10,7 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "tw": "npx tailwindcss -i src/css/input.css -o src/css/output.css --watch",
+    "tw": "npx tailwindcss -i src/css/input.css -o src/assets/styles.css --watch",
     "dev": "concurrently \"npm run start\" \"npm run tw\""
   },
   "eslintConfig": {
