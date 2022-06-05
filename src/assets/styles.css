@@ -952,6 +952,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .dark .dark\:sm\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
 }
 
 @media (min-width: 768px) {
@@ -1030,6 +1035,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:hover\:text-blue-700:hover {
     --tw-text-opacity: 1;
     color: rgb(29 78 216 / var(--tw-text-opacity));
+  }
+
+  .dark .dark\:md\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+
+  .dark .dark\:md\:bg-transparent {
+    background-color: transparent;
   }
 
   .dark .md\:dark\:hover\:bg-transparent:hover {
