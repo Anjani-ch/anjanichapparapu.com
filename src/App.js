@@ -13,7 +13,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-        <main className="container">
+        <main className="container grow shrink-0 basis-auto my-8">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
