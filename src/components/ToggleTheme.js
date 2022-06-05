@@ -81,18 +81,18 @@ function ToggleTheme() {
 
   return (
     <div className="relative">
-        <button onClick={() => setIsDropdownToggled(!isDropdownToggled)} type="button" className="flex mr-3 text-xl rounded-md p-1.5 md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 dark:text-white">
-            <span className="sr-only">Toggle theme</span>
-            {renderIcon()}
-        </button>
+      <button onClick={() => setIsDropdownToggled(!isDropdownToggled)} type="button" className="flex mr-3 text-xl rounded-md p-1.5 focus:ring-2 focus:ring-gray-300 hover:bg-gray-100 md:mr-0 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700">
+        <span className="sr-only">Toggle theme</span>
+        {renderIcon()}
+      </button>
 
-        <div className={dropdownClass() + "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"}>
-            <div className="py-1">
-                <Link onClick={() => setThemeByLocal('light')} to="/" className="text-gray-700 block px-4 py-2 text-sm"><FontAwesomeIcon className="mr-2" icon={faSun} /> Light</Link>
-                <Link onClick={() => setThemeByLocal('dark')} to="/" className="text-gray-700 block px-4 py-2 text-sm"><FontAwesomeIcon className="mr-2" icon={faMoon} /> Dark</Link>
-                <Link onClick={() => setThemeByPrefered()} to="/" className="text-gray-700 block px-4 py-2 text-sm"><FontAwesomeIcon className="mr-2" icon={faDisplay} /> System</Link>
-            </div>
+      <div className={dropdownClass() + "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-700"}>
+        <div className="py-1">
+          <Link onClick={() => setThemeByLocal('light')} to="/" className="text-gray-700 block px-4 py-2 text-md dark:text-white"><FontAwesomeIcon className="mr-2" icon={faSun} /> Light</Link>
+          <Link onClick={() => setThemeByLocal('dark')} to="/" className="text-gray-700 block px-4 py-2 text-md dark:text-white"><FontAwesomeIcon className="mr-2" icon={faMoon} /> Dark</Link>
+          <Link onClick={() => setThemeByPrefered()} to="/" className="text-gray-700 block px-4 py-2 text-md dark:text-white"><FontAwesomeIcon className="mr-2" icon={faDisplay} /> System</Link>
         </div>
+      </div>
     </div>
   )
 }
