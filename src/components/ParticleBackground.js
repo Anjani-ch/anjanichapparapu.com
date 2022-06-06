@@ -1,14 +1,13 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-import ThemeContext from '../contexts/ThemeContext';
+import { useTheme } from '../contexts/ThemeContext';
 
 import ParticleSystem from '../classes/ParticleSystem';
 import Particle from '../classes/Particle';
 
 function ParticleBackground() {
-  const { theme } = useContext(ThemeContext);
-
   const canvasRef = useRef(null);
+  const theme = useTheme();
 
   const initParticleBackground = () => {
     const NUMBER_OF_PARTICLES = 80;
@@ -48,5 +47,3 @@ function ParticleBackground() {
 }
 
 export default ParticleBackground;
-
-// https://stackoverflow.com/questions/14684393/is-there-a-way-to-get-the-hexadecimal-value-of-any-css-coloryoutube.com

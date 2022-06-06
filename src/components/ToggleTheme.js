@@ -1,47 +1,19 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faDisplay, faMoon } from '@fortawesome/free-solid-svg-icons';
 
-import ThemeContext from '../contexts/ThemeContext';
+import { useThemeSetPreffered, useThemeSetLocal, useTheme } from '../contexts/ThemeContext';
 
 import { STORAGE_KEY } from '../keys/localStorageKeys';
 
 function ToggleTheme() {
-  const { theme, setTheme } = useContext(ThemeContext);
-
   const [isDropdownToggled, setIsDropdownToggled] = useState(false);
   const [dropdownClass, setDropdownClass] = useState('');
-
-  const updateThemeInDocument = (value) => {
-    if(value === 'dark') {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
-  }
-
-  const setThemeByPrefered = () => {
-    let result;
-
-    if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        result = 'dark';
-    } else {
-        result = 'light';
-    }
-
-    localStorage.setItem(STORAGE_KEY, result);
-    setTheme(result);
-
-    updateThemeInDocument(result);
-  }
-
-  const setThemeByLocal = (value) => {
-    localStorage.setItem(STORAGE_KEY, value);
-    setTheme(value);
-
-    updateThemeInDocument(value);
-  }
+  
+  const theme = useTheme();
+  const setThemeByLocal = useThemeSetLocal();
+  const setThemeByPreffered = useThemeSetPreffered();
 
   const renderIcon = () => {
     let result;
@@ -92,7 +64,7 @@ function ToggleTheme() {
     const themeInStorage = localStorage.getItem(STORAGE_KEY);
     
     if(!themeInStorage) {
-      setThemeByPrefered();
+      setThemeByPreffered();
     } else if(themeInStorage) {
       setThemeByLocal(themeInStorage);
     }
@@ -111,7 +83,7 @@ function ToggleTheme() {
         <div className="py-1">
           <div onClick={() => setThemeByLocal('light')} className="text-gray-700 block px-4 py-2 text-md cursor-pointer dark:text-white"><FontAwesomeIcon className="mr-2" icon={faSun} /> Light</div>
           <div onClick={() => setThemeByLocal('dark')} className="text-gray-700 block px-4 py-2 text-md cursor-pointer dark:text-white"><FontAwesomeIcon className="mr-2" icon={faMoon} /> Dark</div>
-          <div onClick={() => setThemeByPrefered()} className="text-gray-700 block px-4 py-2 text-md cursor-pointer dark:text-white"><FontAwesomeIcon className="mr-2" icon={faDisplay} /> System</div>
+          <div onClick={() => setThemeByPreffered()} className="text-gray-700 block px-4 py-2 text-md cursor-pointer dark:text-white"><FontAwesomeIcon className="mr-2" icon={faDisplay} /> System</div>
         </div>
       </div>
     </div>
