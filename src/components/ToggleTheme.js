@@ -98,7 +98,7 @@ function ToggleTheme() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <button onClick={toggleDropdown} type="button" className="flex mr-3 text-xl rounded-md p-1.5 focus:ring-2 focus:ring-gray-300 hover:bg-gray-100 md:mr-0 dark:focus:ring-gray-600 dark:text-white dark:hover:bg-gray-700">
         <span className="sr-only">Toggle theme</span>
         {renderIcon()}
