@@ -3,14 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faDisplay, faMoon } from '@fortawesome/free-solid-svg-icons';
 
-import { useThemeSetPreffered, useThemeSetLocal, useTheme } from '../contexts/ThemeContext';
+import useTheme from '../hooks/useTheme';
+import useThemeSetLocal from '../hooks/useThemeSetLocal';
+import useThemeSetPreffered from '../hooks/useThemeSetPreffered';
 
 import { STORAGE_KEY } from '../keys/localStorageKeys';
 
 function ToggleTheme() {
   const [isDropdownToggled, setIsDropdownToggled] = useState(false);
   const [dropdownClass, setDropdownClass] = useState('');
-  
+
   const theme = useTheme();
   const setThemeByLocal = useThemeSetLocal();
   const setThemeByPreffered = useThemeSetPreffered();

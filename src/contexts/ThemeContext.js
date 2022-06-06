@@ -1,22 +1,10 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 import { STORAGE_KEY } from '../keys/localStorageKeys';
 
 const ThemeContext = createContext();
 const ThemeSetPrefferedContext = createContext();
 const ThemeSetLocalContext = createContext();
-
-function useTheme() {
-    return useContext(ThemeContext);
-}
-
-function useThemeSetPreffered() {
-    return useContext(ThemeSetPrefferedContext);
-}
-
-function useThemeSetLocal() {
-    return useContext(ThemeSetLocalContext);
-}
 
 function ThemeProvider({ children }) {
     const [theme, setTheme] = useState(null);
@@ -64,7 +52,7 @@ function ThemeProvider({ children }) {
 
 export {
     ThemeProvider,
-    useTheme,
-    useThemeSetLocal,
-    useThemeSetPreffered
+    ThemeContext,
+    ThemeSetLocalContext,
+    ThemeSetPrefferedContext
 }

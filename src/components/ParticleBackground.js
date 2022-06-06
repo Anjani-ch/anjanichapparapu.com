@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-import { useTheme } from '../contexts/ThemeContext';
+import useTheme from '../hooks/useTheme';
 
 import ParticleSystem from '../classes/ParticleSystem';
 import Particle from '../classes/Particle';
