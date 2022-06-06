@@ -25,10 +25,6 @@ function Header() {
     }
   ];
 
-  const toggleNav = () => {
-    setIsToggled(!isToggled);
-  }
-
   const renderToggleButton = () => {
     let result;
 
@@ -54,7 +50,7 @@ function Header() {
           <div className="flex items-center md:order-2">
             <ToggleTheme />
 
-            <button onClick={toggleNav} data-collapse-toggle="mobile-nav" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+            <button onClick={() => setIsToggled(!isToggled)} data-collapse-toggle="mobile-nav" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
               <span className="sr-only">Toggle mobile menu</span>
               {renderToggleButton()}
             </button>
