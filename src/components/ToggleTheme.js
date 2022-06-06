@@ -27,7 +27,7 @@ function ToggleTheme() {
         result = 'light';
     }
 
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.setItem(STORAGE_KEY, result);
     setTheme(result);
 
     updateThemeInDocument(result);
