@@ -1,9 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
+
+import ThemeContext from '../contexts/ThemeContext';
 
 import ParticleSystem from '../classes/ParticleSystem';
 import Particle from '../classes/Particle';
 
 function ParticleBackground() {
+  const { theme } = useContext(ThemeContext);
+
   const canvasRef = useRef(null);
 
   const initParticleBackground = () => {
@@ -16,7 +20,7 @@ function ParticleBackground() {
 
     const particles = [];
 
-    const particleColor = document.documentElement.classList.contains('dark') ? 'white' : '#2563EB';
+    const particleColor = theme === 'dark' ? 'white' : '#2563EB';
 
     let particleSystem;
 
@@ -36,11 +40,7 @@ function ParticleBackground() {
     particleSystem.run();
   }
 
-  useEffect(initParticleBackground, []);
-
-  useEffect(() => {
-      console.log(123);
-  });
+  useEffect(initParticleBackground, [theme]);
 
   return (
     <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full hidden md:block"></canvas>

@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faDisplay, faMoon } from '@fortawesome/free-solid-svg-icons';
 
+import ThemeContext from '../contexts/ThemeContext';
+
 import { STORAGE_KEY } from '../keys/localStorageKeys';
 
 function ToggleTheme() {
-  const [theme, setTheme] = useState(null);
+  const { theme, setTheme } = useContext(ThemeContext);
+
   const [isDropdownToggled, setIsDropdownToggled] = useState(false);
   const [dropdownClass, setDropdownClass] = useState('');
 
