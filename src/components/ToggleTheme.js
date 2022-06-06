@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faDisplay, faMoon } from '@fortawesome/free-solid-svg-icons';
 
+import { STORAGE_KEY } from '../keys/localStorageKeys';
+
 function ToggleTheme() {
   const [theme, setTheme] = useState(null);
   const [isDropdownToggled, setIsDropdownToggled] = useState(false);
   const [dropdownClass, setDropdownClass] = useState('');
-
-  const STORAGE_KEY = 'theme';
 
   const updateThemeInDocument = (value) => {
     if(value === 'dark') {
