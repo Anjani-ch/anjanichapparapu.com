@@ -47,9 +47,9 @@ function Header() {
 
   return (
     <header>
-      <nav className="bg-white px-2 sm:px-4 py-2.5 border-b border-slate-400 dark:bg-gray-800">
+      <nav className="bg-white px-2 sm:px-4 py-2.5 border-b border-slate-400 dark:border-0 dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <NavLink to="/" className="flex items-center text-2xl dark:text-white">AC</NavLink>
+          <NavLink to="/" className="flex items-center text-2xl">AC</NavLink>
 
           <div className="flex items-center md:order-2">
             <ToggleTheme />
