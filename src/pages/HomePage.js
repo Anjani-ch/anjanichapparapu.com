@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ParticleBackground from '../components/ParticleBackground';
 
-import personalPicture from '../assets/anjani.jpg';
+import personalPicture from '../assets/img/anjani.jpg';
 
 function HomePage() {
   return (
