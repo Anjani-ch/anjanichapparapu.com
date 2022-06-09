@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --github-dark-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+html.dark .github-logo-dark {
+    filter: var(--github-dark-filter);
+}
+
 body {
     @apply bg-neutral-100 dark:bg-gray-900 dark:text-white;
     z-index: -2;
@@ -19,4 +27,10 @@ body {
 
 canvas {
     z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .github-logo-dark {
+        filter: var(--github-dark-filter);
+    }
 }
