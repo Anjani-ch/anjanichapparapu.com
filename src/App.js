@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 
-import Header from './components/Header';
+import Header from './components/header/Header';
 import Footer from './components/Footer';
 
 import { ThemeProvider } from './contexts/ThemeContext';
