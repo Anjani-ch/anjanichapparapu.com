@@ -3,17 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faMobileScreen } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import htmlLogo from '../assets/img/logos/html.svg';
-import cssLogo from '../assets/img/logos/css3.svg';
-import jsLogo from '../assets/img/logos/javascript.svg';
-import reactLogo from '../assets/img/logos/react.svg';
-import vueLogo from '../assets/img/logos/vue-dot-js.svg';
-import nodejsLogo from '../assets/img/logos/node-js.svg';
-import mongodbLogo from '../assets/img/logos/mongodb.svg';
-import firebaseLogo from '../assets/img/logos/firebase.svg';
-import gitLogo from '../assets/img/logos/git.svg';
-import githubLogo from '../assets/img/logos/github.svg';
-import linuxLogo from '../assets/img/logos/linux.svg';
+import SkillGrid from '../components/about/SkillGrid';
 
 function AboutPage() {
   return (
@@ -35,64 +25,8 @@ function AboutPage() {
 
       <section className="container my-20 p-5 rounded-lg border border-slate-400 bg-white shadow-xl dark:border-0 dark:bg-gray-800">
         <h1 className="text-4xl text-center mb-6">Technical <span className="text-blue-600 dark:text-blue-500">Skills</span></h1>
-
-          <div className="grid gap-4 grid-col-1 md:w-10/12 mx-auto sm:grid-cols-3 md:grid-cols-4">
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">HTML</h3>
-              <img src={htmlLogo} alt="html-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">CSS</h3>
-              <img src={cssLogo} alt="css-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">JavaScript</h3>
-              <img src={jsLogo} alt="javascript-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">React</h3>
-              <img src={reactLogo} alt="react-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">Vue</h3>
-              <img src={vueLogo} alt="vue-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">Node JS</h3>
-              <img src={nodejsLogo} alt="node-js-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">MongoDB</h3>
-              <img src={mongodbLogo} alt="mongodb-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">Firebase</h3>
-              <img src={firebaseLogo} alt="firebase-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">Git</h3>
-              <img src={gitLogo} alt="git-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">GitHub</h3>
-              <img className="github-logo-dark" src={githubLogo} alt="github-logo" />
-            </div>
-
-            <div className="bg-neutral-100 text-center rounded-lg p-5 border border-slate-500 dark:border-0 dark:bg-gray-900 dark:text-white">
-              <h3 className="mb-3 font-bold text-lg">Linux</h3>
-              <img src={linuxLogo} alt="linux-logo" />
-            </div>
-          </div>
-        </section>
+        <SkillGrid />
+      </section>
     </Fragment>
   )
 }
