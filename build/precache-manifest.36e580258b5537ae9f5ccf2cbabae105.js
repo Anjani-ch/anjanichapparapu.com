@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "cb7aa1d7ad3048f30f7d",
-    "url": "/static/css/main.e256dd58.chunk.css"
+    "revision": "a06aa403d85973ca55b8",
+    "url": "/static/css/main.3bd4f79a.chunk.css"
   },
   {
-    "revision": "cb7aa1d7ad3048f30f7d",
-    "url": "/static/js/main.cb7aa1d7.chunk.js"
+    "revision": "a06aa403d85973ca55b8",
+    "url": "/static/js/main.a06aa403.chunk.js"
   },
   {
-    "revision": "b8b942e8a88b87ca4295",
-    "url": "/static/js/1.b8b942e8.chunk.js"
+    "revision": "76ebb4b949123acae70b",
+    "url": "/static/js/1.76ebb4b9.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/static/media/simon_game.ddf98173.png"
   },
   {
-    "revision": "3098884f5e6798d2bbef2915f912d438",
+    "revision": "ff52d0812dd0c45b143721152b78a2af",
     "url": "/index.html"
   }
 ];
