@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <Fragment>
       <ParticleBackground />
-      <section className="container my-40 flex items-center justify-between flex-col-reverse md:flex-row">
+      <section className="container my-10 flex items-center justify-between flex-col-reverse sm:my-20 md:flex-row lg:my-30">
         <div>
           <h1 className="text-5xl text-center font-bold tracking-tight mt-4 md:mt-0 md:text-left md:text-6xl xl:text-7xl">Anjani <span className="text-blue-600 dark:text-blue-500">Chapparapu</span></h1>
           <h3 className="text-3xl text-center mt-3 mb-5 md:mb-7 md:text-left">Web Development</h3>
