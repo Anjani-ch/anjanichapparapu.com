@@ -1,13 +1,13 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMobileScreen } from '@fortawesome/free-solid-svg-icons';
+
+import ContactGrid from '../components/contact/ContactGrid';
 
 function ContactPage() {
   return (
     <section className="container my-10 mx-24 md:my-20">
       <h1 className="text-4xl text-center mb-9">Contact <span className="text-blue-600 dark:text-blue-500">Me</span></h1>
 
-      <div className="grid gap-7 grid-cols-1 md:grid-cols-2 md:gap-14">
+      {/* <div className="grid gap-7 grid-cols-1 md:grid-cols-2 md:gap-14">
         <div className="text-center py-6 rounded-lg border border-slate-400 bg-white shadow-xl dark:border-0 dark:bg-gray-800">
           <FontAwesomeIcon className="text-5xl mb-3" icon={faEnvelope} />
 
@@ -23,7 +23,8 @@ function ContactPage() {
 
           <p className="text-gray-700 dark:text-gray-400">+47 418 41 851</p>
         </div>
-      </div>
+      </div> */}
+      <ContactGrid />
     </section>
   )
 }
